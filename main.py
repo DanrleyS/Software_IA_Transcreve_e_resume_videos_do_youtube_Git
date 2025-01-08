@@ -1,9 +1,11 @@
 import openai
 import yt_dlp as youtube_dl
 import os
+from dotenv import load_dotenv
 
+load_dotenv()  # Carrega as variáveis de ambiente do arquivo .env
 
-openai.api_key = " " #coloca aqui a chave
+openai.api_key = os.getenv("OPENAI_API_KEY")
 if not openai.api_key:
     raise ValueError("A chave de API do OpenAI não foi encontrada no arquivo .env.")
 
