@@ -1,0 +1,2 @@
+yt-dlp
+openai==0.28
